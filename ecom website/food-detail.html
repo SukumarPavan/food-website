@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Detail - Food for Everyone</title>
+    <link rel="stylesheet" href="styles/food-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="detail-container">
+        <header>
+            <button class="back-btn" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <button class="favorite-btn">
+                <i class="far fa-heart"></i>
+            </button>
+        </header>
+
+        <div class="food-detail">
+            <div class="food-image-container">
+                <img src="" alt="" id="foodImage" class="food-image">
+                <div class="image-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+
+            <div class="food-info">
+                <h1 id="foodName"></h1>
+                <p class="price" id="foodPrice"></p>
+
+                <div class="info-section">
+                    <h2>Delivery info</h2>
+                    <p>Delivered between monday aug and thursday 20 from 8pm to 91:32 pm</p>
+                </div>
+
+                <div class="info-section">
+                    <h2>Return policy</h2>
+                    <p>All our foods are double checked before leaving our stores so by any case you found a broken food please contact our hotline immediately.</p>
+                </div>
+
+                <button class="add-to-cart-btn">Add to cart</button>
+            </div>
+        </div>
+    </div>
+    <script src="js/food-detail.js"></script>
+</body>
+</html> 

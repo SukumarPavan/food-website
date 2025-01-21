@@ -1,0 +1,28 @@
+[
+  {
+    "id": "1737384912476",
+    "email": "123@g.com",
+    "password": "Sanju@01",
+    "name": "Sanjay",
+    "phone": "",
+    "address": "",
+    "createdAt": "2025-01-20T14:55:12.480Z"
+  },
+  {
+    "id": "1737385057937",
+    "email": "wrgw@gmail.com",
+    "password": "Sanju@01",
+    "name": "Sanjay",
+    "phone": "",
+    "address": "",
+    "createdAt": "2025-01-20T14:57:37.937Z"
+  },
+  {
+    "id": "1737385163017",
+    "email": "wrg@gmail.com",
+    "password": "Sanju@01",
+    "name": "Sanjay Anand",
+    "phone": "9029302919",
+    "createdAt": "2025-01-20T14:59:23.017Z"
+  }
+]

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile - Food for Everyone</title>
+    <link rel="stylesheet" href="styles/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header>
+            <button class="back-btn" onclick="history.back()">
+                <i class="fas fa-arrow-left"></i>
+            </button>
+            <h2>My profile</h2>
+        </header>
+
+        <div class="profile-content">
+            <section class="personal-details">
+                <div class="section-header">
+                    <h3>Personal details</h3>
+                    <button class="change-btn">change</button>
+                </div>
+                
+                <div class="user-info">
+                    <img src="images/profile-pic.jpg" alt="Profile Picture" class="profile-pic">
+                    <div class="info-text">
+                        <h4 id="userName">Marvis Ighedosa</h4>
+                        <p id="userEmail">dosamarvis@gmail.com</p>
+                        <p id="userPhone">+234 9011039271</p>
+                        <p id="userAddress">No 15 uti street off ovie palace road effurun delta state</p>
+                    </div>
+                </div>
+            </section>
+
+            <div class="menu-items">
+                <a href="orders.html" class="menu-item">
+                    <span>Orders</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                
+                <a href="pending-reviews.html" class="menu-item">
+                    <span>Pending reviews</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                
+                <a href="faq.html" class="menu-item">
+                    <span>FAQ</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+                
+                <a href="help.html" class="menu-item">
+                    <span>Help</span>
+                    <i class="fas fa-chevron-right"></i>
+                </a>
+            </div>
+
+            <button class="update-btn">Update</button>
+        </div>
+
+        <!-- Edit Profile Modal -->
+        <div class="modal" id="editProfileModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Edit Profile</h3>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <form id="editProfileForm">
+                    <div class="form-group">
+                        <label>Name</label>
+                        <input type="text" id="editName" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="editPhone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Address</label>
+                        <textarea id="editAddress" required></textarea>
+                    </div>
+                    <button type="submit" class="save-btn">Save Changes</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/profile.js"></script>
+</body>
+</html> 

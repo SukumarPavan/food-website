@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #FF4B3A;
+    --text-color: #000000;
+    --gray-text: #9A9A9D;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Text', Arial, sans-serif;
+}
+
+body {
+    background: var(--white);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+}
+
+.tab-container {
+    width: 100%;
+    max-width: 320px;
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.tab {
+    flex: 1;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 18px;
+    color: var(--gray-text);
+    text-decoration: none;
+}
+
+.tab.active {
+    color: var(--text-color);
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 320px;
+    padding: 0 20px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.form-group label {
+    display: block;
+    color: var(--gray-text);
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.form-group input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #F2F2F2;
+    padding: 10px 0;
+    font-size: 17px;
+    outline: none;
+}
+
+.form-group input:focus {
+    border-bottom-color: var(--primary-color);
+}
+
+.forgot-password {
+    text-align: right;
+    margin-top: -20px;
+    margin-bottom: 30px;
+}
+
+.forgot-password a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 15px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 30px;
+    padding: 20px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+button[type="submit"]:hover {
+    background: #ff3526;
+}
+
+.error-message {
+    display: none;
+    align-items: center;
+    color: #FF4B3A;
+    font-size: 14px;
+    margin-top: 8px;
+    gap: 5px;
+}
+
+.error-message i {
+    font-size: 16px;
+}
+
+/* Add error state for inputs */
+.form-group.error input {
+    border-bottom-color: #FF4B3A;
+} 

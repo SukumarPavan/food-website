@@ -1,0 +1,160 @@
+:root {
+    --primary-color: #FF4B3A;
+    --background-color: #F6F6F6;
+    --text-color: #333;
+    --gray-text: #9A9A9D;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+}
+
+.detail-container {
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Header */
+header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.back-btn, .favorite-btn {
+    background: var(--white);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+/* Food Image Section */
+.food-image-container {
+    width: 100%;
+    height: 45vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.food-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-dots {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--white);
+    opacity: 0.5;
+}
+
+.dot.active {
+    opacity: 1;
+    background: var(--primary-color);
+}
+
+/* Food Info Section */
+.food-info {
+    background: var(--white);
+    border-radius: 30px 30px 0 0;
+    margin-top: -30px;
+    padding: 30px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.food-info h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.price {
+    color: var(--primary-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+.info-section {
+    margin-bottom: 30px;
+}
+
+.info-section h2 {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.info-section p {
+    color: var(--gray-text);
+    line-height: 1.6;
+    font-size: 15px;
+}
+
+.add-to-cart-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    padding: 20px;
+    border-radius: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ff3526;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .food-info h1 {
+        font-size: 24px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+
+    .info-section h2 {
+        font-size: 16px;
+    }
+
+    .info-section p {
+        font-size: 14px;
+    }
+} 

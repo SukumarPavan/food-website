@@ -1,0 +1,8 @@
+go to 
+
+
+open cmd from the server folder this :   C:\Users\DELL\Desktop\ecom website\server 
+and type cmd in the folder directory to open in terminal 
+now in terminal within the above dir type :    node server.js 
+and then run the http://localhost:3000 in your chrome to see the website
+and now you can see login signup and other details in the server.js in terminal

@@ -1,0 +1,240 @@
+:root {
+    --primary-color: #FF4B3A;
+    --background-color: #F6F6F6;
+    --text-color: #333;
+    --gray-text: #9A9A9D;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+.cart-container {
+    max-width: 480px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    position: relative;
+}
+
+/* Header Styles */
+header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 8px;
+}
+
+header h2 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Swipe Info */
+.swipe-info {
+    padding: 15px 20px;
+    color: var(--gray-text);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--background-color);
+    margin: 10px 0;
+}
+
+/* Cart Items */
+.cart-items {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: var(--white);
+    border-radius: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 15px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.price {
+    color: var(--primary-color);
+    font-weight: 600;
+    font-size: 15px;
+}
+
+/* Quantity Controls */
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto;
+}
+
+.quantity-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity {
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 20px;
+    text-align: center;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--gray-text);
+    cursor: pointer;
+    padding: 8px;
+    margin-left: 10px;
+}
+
+/* Empty Cart State */
+.empty-cart {
+    text-align: center;
+    padding: 40px 20px;
+    color: var(--gray-text);
+}
+
+.empty-cart i {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+/* Footer */
+.cart-footer {
+    padding: 20px;
+    background: var(--white);
+    position: sticky;
+    bottom: 0;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.complete-order-btn {
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    width: 100%;
+    padding: 15px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.complete-order-btn:hover {
+    background-color: #ff3526;
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(100px);
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.notification.show {
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Swipe Animation */
+.cart-item {
+    transition: transform 0.3s ease;
+}
+
+.cart-item.swiping {
+    transform: translateX(-100px);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .cart-container {
+        max-width: 100%;
+    }
+
+    .cart-item {
+        padding: 10px;
+    }
+
+    .cart-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .item-details h3 {
+        font-size: 14px;
+    }
+
+    .price {
+        font-size: 14px;
+    }
+
+    .quantity-btn {
+        width: 22px;
+        height: 22px;
+        font-size: 14px;
+    }
+} 

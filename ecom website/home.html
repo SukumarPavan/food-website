@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food for Everyone - Home</title>
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>`
+    <div class="container">
+        <header>
+            <div class="user-info">
+                <h2>Delicious</h2>
+                <h2>food for you</h2>
+            </div>
+            <div class="profile-pic">
+                <img src="/images/profile.png" alt="Profile" id="profilePic">
+            </div>
+        </header>
+
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search">
+        </div>
+
+        <nav class="categories">
+            <a href="#" class="active">Foods</a>
+            <a href="#">Drinks</a>
+            <a href="#">Snacks</a>
+            <a href="#">Sauce</a>
+        </nav>
+
+        <div class="food-grid" id="foodGrid">
+            <!-- Food items will be loaded here dynamically -->
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="#" class="active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-heart"></i>
+                <span>Favorites</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-user"></i>
+                <span>Profile</span>
+            </a>
+            <a href="#">
+                <i class="fas fa-history"></i>
+                <span>History</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- Food Item Template -->
+    <template id="food-card-template">
+        <div class="food-card">
+            <div class="food-image">
+                <img src="" alt="">
+                <button class="favorite-btn"><i class="far fa-heart"></i></button>
+            </div>
+            <div class="food-info">
+                <h3></h3>
+                <p class="price"></p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </template>
+
+    <script src="/js/home.js"></script>
+</body>
+</html> 
