@@ -1,0 +1,137 @@
+:root {
+    --primary-color: #FF1F4C;
+    --white: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background: var(--primary-color);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.splash-container {
+    width: 100%;
+    max-width: 375px;
+    height: 812px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.side-text {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.text-item {
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+.content {
+    width: 100%;
+    padding: 0 30px;
+    text-align: center;
+}
+
+.logo {
+    color: var(--white);
+    font-size: 80px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+}
+
+.tagline {
+    color: var(--white);
+    font-size: 24px;
+    line-height: 1.4;
+    margin-bottom: 80px;
+    font-weight: 500;
+}
+
+.auth-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.connect-btn {
+    width: 100%;
+    padding: 25px;
+    border-radius: 30px;
+    border: none;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.google-btn {
+    background: var(--white);
+    color: #000000;
+}
+
+.email-btn {
+    background: #4267B2;
+    color: var(--white);
+}
+
+.connect-btn:active {
+    transform: scale(0.98);
+}
+
+/* iPhone SE and smaller devices */
+@media screen and (max-width: 375px) {
+    .splash-container {
+        height: 100vh;
+    }
+
+    .logo {
+        font-size: 65px;
+    }
+
+    .tagline {
+        font-size: 20px;
+        margin-bottom: 60px;
+    }
+
+    .side-text {
+        left: 15px;
+    }
+
+    .text-item {
+        font-size: 24px;
+    }
+
+    .connect-btn {
+        padding: 20px;
+    }
+}
+
+/* For taller screens */
+@media screen and (min-height: 800px) {
+    .splash-container {
+        height: 100vh;
+    }
+} 
